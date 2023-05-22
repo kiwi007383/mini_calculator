@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: rgba(255, 255, 255, 0.986);
+        }
+
+        .content {
+            background-color: rgb(243, 243, 243);
+            width: 400px;
+            margin: auto;
+            margin-top: 50px;
+            border-radius: 9px;
+        }
+
+        .title {
+            text-align: center;
+            padding-top: 10px;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+            margin-bottom: 5px;
+            font-size: 17px;
+            margin-left: 22px;
+        }
+
+        .user-input {
+            width: 80%;
+            padding: 10px 15px;
+            margin: 0px 22px;
+            border-radius: 8px;
+            border: 1px solid rgba(128, 128, 128, 0.582);
+        }
+
+        .checkbox-group {
+            margin-top: 15px;
+            margin-left: 20px
+        }
+
+        span {
+            color: blue;
+        }
+
+        .rgt-btn {
+            width: 88%;
+            margin: 0px 23px;
+            border: none;
+            background-color: rgb(77, 77, 255);
+            color: white;
+            padding: 10px 15px;
+            border-radius: 7px;
+            font-size: 18px;
+            margin-top: 14px;
+            margin-bottom: 20px;
+        }
+
+        .footer-group {
+            text-align: center;
+            padding: 10px 0px;
+            padding-bottom: 20px;
+        }
+        .result{
+            padding: 20px 0px;
+            font-size: 30px;
+            font-weight: bold;
+            display: flex;
+            justify-content: flex-end;
+            margin-right: 20px;
+        }
+        .error{
+            color: red;
+            margin: 0px 25px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="content">
+        <div class="title">
+            <h2>mini calculator</h1>
+        </div>
+        <div class="result" id="result">0</div>
+
+        <div class="input-group">
+            <label >Number One :</label>
+            <input type="number" class="user-input" id="firstNumber" placeholder="Enter your first number">
+            <small class="error" id="oneError">Number one is required!</small>
+        </div>
+
+        <div class="input-group">
+            <label >Number two :</label>
+            <input type="number" class="user-input" id="secondNumber" placeholder="Enter your second number">
+            <small class="error" id="twoError">Number two is required!</small>
+        </div>
+
+        <div class="input-group">
+            <label >Operators :</label>
+            <select class="user-input" id="operation">
+                <option value="empty">choose options...</option>
+                <option value="add">+</option>
+                <option value="minus">-</option>
+                <option value="multiply">*</option>
+                <option value="division">/</option>
+            </select>
+            <small class="error" id="operatorError">Operator is required!</small>
+        </div>
+
+        <div class="button-group">
+            <button type="button" class="rgt-btn" id="btnCalculate">Start</button>
+        </div>    
+    </div>
+</body>
+<script src="./index.js"></script>
+</html> 
